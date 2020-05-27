@@ -1,4 +1,4 @@
-name: "Okteto Delete Namespace"
+name: "Delete Namespace"
 description: "Delete an Okteto Cloud namespace"
 inputs:
   namespace: 
