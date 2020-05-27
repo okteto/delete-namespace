@@ -1,4 +1,4 @@
-name: "Delete Namespace"
+name: "Okteto Delete Namespace"
 description: "Delete an Okteto Cloud namespace"
 inputs:
   namespace: 
@@ -9,3 +9,6 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.namespace }}
+branding:
+  color: 'green'
+  icon: 'grid'
