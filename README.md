@@ -17,6 +17,12 @@ You can use this action to delete a namespace in Okteto Cloud as part of your au
 
 > Remember that the namespace name must have your github ID as a suffix.
 
+## Environment variables
+
+### `CUSTOM_CERTIFICATE`
+
+The self-signed certificate of your environment.
+
 ## Example usage
 
 This example runs the login action and then deletes a namespace.
