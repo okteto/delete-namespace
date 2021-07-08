@@ -69,8 +69,8 @@ jobs:
        with:
          token: ${{ secrets.OKTETO_TOKEN }}
     
-     - name: "Delete the previews preview environment"
-       uses: okteto/destroy-preview@master
+     - name: "Delete the previews namespace"
+       uses: okteto/delete-namespace@master
        with:
-        name: dev-previews-cindylopez
+         name: dev-previews-cindylopez
 ```
