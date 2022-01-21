@@ -13,5 +13,5 @@ if [ ! -z "$OKTETO_CA_CERT" ]; then
    update-ca-certificates
 fi
 
-echo running: okteto delete namespace $namespace
-okteto delete namespace $namespace
+echo running: okteto namespace delete $namespace
+okteto namespace delete $namespace
