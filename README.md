@@ -1,21 +1,19 @@
-# GitHub Actions for Okteto Cloud
+# GitHub Actions for Okteto
 
-## Automate your development workflows using Github Actions and Okteto Cloud
-GitHub Actions gives you the flexibility to build an automated software development workflows. With GitHub Actions for Okteto Cloud you can create workflows to build, deploy and update your applications in [Okteto Cloud](https://cloud.okteto.com).
+## Automate your development workflows using Github Actions and Okteto
+GitHub Actions gives you the flexibility to build automated software development workflows. With GitHub Actions for Okteto you can create workflows to build, deploy and update your applications in [Okteto](https://okteto.com).
 
-Get started today with a [free Okteto Cloud account](https://cloud.okteto.com)!
+Try Okteto for free for 30 days, no credit card required. [Start your 30-day trial now](https://www.okteto.com/free-trial/)!
 
-## Github Action for Deleting a Namespace in Okteto Cloud
+## Github Action for Deleting a Namespace in Okteto
 
-You can use this action to delete a namespace in Okteto Cloud as part of your automated development workflow.
+You can use this action to delete a namespace in Okteto as part of your automated development workflow.
 
 ## Inputs
 
 ### `namespace`
 
 **Required**  The name of the Okteto namespace to delete.
-
-> Remember that the namespace name must have your github ID as a suffix.
 
 ## Example usage
 
@@ -35,6 +33,7 @@ jobs:
     
     - uses: okteto/context@latest
       with:
+        url: https://okteto.example.com
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - name: "Delete the previews namespace"
@@ -50,7 +49,7 @@ jobs:
 
  You can specify a custom certificate authority or a self-signed certificate by setting the `OKTETO_CA_CERT` environment variable. When this variable is set, the action will install the certificate in the container, and then execute the action. 
 
- Use this option if you're using a private Certificate Authority or a self-signed certificate in your [Okteto Enterprise](http://okteto.com/enterprise) instance.  We recommend that you store the certificate as an [encrypted secret](https://docs.github.com/en/actions/reference/encrypted-secrets), and that you define the environment variable for the entire job, instead of doing it on every step.
+ Use this option if you're using a private Certificate Authority or a self-signed certificate in your [Okteto SH](https://www.okteto.com/docs/self-hosted/) instance instance.  We recommend that you store the certificate as an [encrypted secret](https://docs.github.com/en/actions/reference/encrypted-secrets), and that you define the environment variable for the entire job, instead of doing it on every step.
 
 
  ```yaml
@@ -67,6 +66,7 @@ jobs:
      steps:
      - uses: okteto/context@latest
        with:
+         url: https://okteto.example.com
          token: ${{ secrets.OKTETO_TOKEN }}
     
      - name: "Delete the previews namespace"
