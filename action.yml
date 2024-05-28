@@ -4,11 +4,15 @@ inputs:
   namespace: 
     description: "The name of the namespace to delete"
     required: true
+  log-level:
+    description: "Log level string. Valid options are debug, info, warn, error"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.namespace }}
+    - ${{ inputs.log-level }}
 branding:
   color: 'green'
   icon: 'grid'
